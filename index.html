@@ -1,11 +1,61 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <title>Softimiza</title>
-   <link rel="stylesheet" href="css/index.css">
- </head>
- <body>
-   <h1>Parallax</h1>
- </body>
- </html> 
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Softimiza</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div class="bgimg bgimg-1">
+    <div class="caption">
+      <img src="./images/logoblack.png" alt="SOFTIMIZA">
+      <hr>
+      <h1 class="border">SOFTIMIZA</h1>
+    </div>
+  </div>
+
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">Parallax Demo</h3>
+    <p>Somos una compañía de consultoría en Software Asset Management (SAM) y Software License Optimization (SLO) especializada en generar ahorros en la adquisición y utilización de Activos Informáticos para nuestros clientes.</p>
+  </div>
+
+  <div class="bgimg bgimg-2">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+    </div>
+  </div>
+
+  <div class="bgimg bgimg-3">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+    </div>
+  </div>
+
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+    </div>
+  </div>
+
+  <div class="bgimg bgimg-1">
+    <div class="caption">
+      <span class="border">COOL!</span>
+    </div>
+  </div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<script>
+		 $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+	</script>
+</body>
+</html> 
