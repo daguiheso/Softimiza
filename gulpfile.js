@@ -25,6 +25,7 @@ gulp.task('css', function () {
 // Watch changes
 gulp.task('watch', function() {
   gulp.watch('./src/*.scss', ['css'])
+  gulp.watch('./js/*.js').on('change', browserSync.reload)
   gulp.watch('./*.html').on('change', browserSync.reload)  // ejecuta function cada vez que escuche cambios
 })
 
