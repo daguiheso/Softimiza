@@ -5,10 +5,13 @@ body, html {
   color: #777;
   font-size: 16px;
 }
+hr {
+  margin: 0;
+}
 
 .bgimg {
   position: relative;
-  opacity: 0.65;
+  opacity: 0.95;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +22,7 @@ body, html {
   }
   &-2 {
     background-image: url("../images/Laberinto.jpg");
-    min-height: 600px;
+    min-height: 100%;
     .caption span {
       // background-color:transparent !important;
       font-size:25px !important;
@@ -33,6 +36,11 @@ body, html {
   &-4 {
     background-image: url("../images/1a.png");
     min-height: 60%;
+  }
+  &-city {
+    // background-image: url("../images/city.jpg");
+    background-color: #e9e9e9;
+    min-height: 265px;
   }
   .caption {
     position: absolute;
@@ -57,6 +65,10 @@ body, html {
   }
 }
 
+#counter {
+  color: red;
+}
+
 
 
 h3 {
@@ -76,7 +88,7 @@ h4 {
   position:relative;
   .wrapper {
     color:#ddd;
-    background-color:#282E34;
+    background-color:#000;
     text-align:center;
     padding:50px 80px;
     text-align: justify;
@@ -86,7 +98,7 @@ h4 {
   }
   &-card {
     position: relative;
-    margin: 15px 0;
+    margin: 15px 10px;
     &:hover {
       img {
         opacity: .3;
@@ -119,7 +131,12 @@ h4 {
 }
 
 .independence {
+  background-color: #000;
   position: relative;
+  color:#ddd;
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify;
   img {
     width: 100%;
   }
@@ -127,6 +144,11 @@ h4 {
 }
 
 .software {
+  color:#ddd;
+  background-color:#000;
+  text-align:center;
+  padding:50px 80px;
+  text-align-last: left;
   ul li p {
     margin: 0;
     padding: 15px 26px;
@@ -134,5 +156,25 @@ h4 {
 }
 
 .footer {
+  /* label color */
+  .input-field {
+    color: #fdd835;
+  }
+  .input-field label {
+    color: #fff;
+  }
+  // /* label focus color */
+  // .input-field input[type=text]:focus + label {
+  //   color: #fdd835;
+  // }
+  /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #fff;
+   }
 
+  /* label underline focus color */
+  .input-field input {
+    border-bottom: 1px solid #fdd835;
+    box-shadow: 0 1px 0 0 #fdd835;
+  }
 }

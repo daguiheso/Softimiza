@@ -5,9 +5,12 @@ body, html {
   color: #777;
   font-size: 16px; }
 
+hr {
+  margin: 0; }
+
 .bgimg {
   position: relative;
-  opacity: 0.65;
+  opacity: 0.95;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,7 +20,7 @@ body, html {
     min-height: 100%; }
   .bgimg-2 {
     background-image: url("../images/Laberinto.jpg");
-    min-height: 600px; }
+    min-height: 100%; }
     .bgimg-2 .caption span {
       font-size: 25px !important;
       color: #f7f7f7 !important; }
@@ -27,6 +30,9 @@ body, html {
   .bgimg-4 {
     background-image: url("../images/1a.png");
     min-height: 60%; }
+  .bgimg-city {
+    background-color: #e9e9e9;
+    min-height: 265px; }
   .bgimg .caption {
     position: absolute;
     left: 50%;
@@ -46,6 +52,9 @@ body, html {
       font-size: 25px;
       letter-spacing: 10px; }
 
+#counter {
+  color: red; }
+
 h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -61,13 +70,13 @@ h4 {
   position: relative; }
   .services .wrapper {
     color: #ddd;
-    background-color: #282E34;
+    background-color: #000;
     text-align: center;
     padding: 50px 80px;
     text-align: justify; }
   .services-card {
     position: relative;
-    margin: 15px 0; }
+    margin: 15px 10px; }
     .services-card:hover img {
       opacity: .3; }
     .services-card:hover p {
@@ -92,10 +101,35 @@ h4 {
       line-height: 35px; }
 
 .independence {
-  position: relative; }
+  background-color: #000;
+  position: relative;
+  color: #ddd;
+  text-align: center;
+  padding: 50px 80px;
+  text-align: justify; }
   .independence img {
     width: 100%; }
 
-.software ul li p {
-  margin: 0;
-  padding: 15px 26px; }
+.software {
+  color: #ddd;
+  background-color: #000;
+  text-align: center;
+  padding: 50px 80px;
+  text-align-last: left; }
+  .software ul li p {
+    margin: 0;
+    padding: 15px 26px; }
+
+.footer {
+  /* label color */
+  /* icon prefix focus color */
+  /* label underline focus color */ }
+  .footer .input-field {
+    color: #fdd835; }
+  .footer .input-field label {
+    color: #fff; }
+  .footer .input-field .prefix.active {
+    color: #fff; }
+  .footer .input-field input {
+    border-bottom: 1px solid #fdd835;
+    box-shadow: 0 1px 0 0 #fdd835; }

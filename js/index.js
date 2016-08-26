@@ -7,14 +7,14 @@ $(document).ready(function(){
     prefix : '', 
     suffix : ''
   };
-  var demo = new CountUp("counter", 5, 42450000, 0, 2.5, options);
+  var demo = new CountUp("counter", 1000000, 42450000, 0, 2.5, options);
 
   $('.collapsible').collapsible({
     accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
   });
   
   var optionsScroll = [
-    { selector: '.parrafo',
+    { selector: '#counter',
       offset: 50, 
       callback: function(el) {
         // debugger
@@ -22,7 +22,7 @@ $(document).ready(function(){
       } 
     },
     {
-      selector: '.parrafo',
+      selector: '#counter',
       offset: 220,
       callback: function(el) {
         // debugger
