@@ -1,16 +1,22 @@
+@import url(http://fonts.googleapis.com/css?family=Glegoo);
+
 body, html {
   height: 100%;
   margin: 0;
   color: #777;
   font-size: 16px;
+  // width: 100%;
 }
 hr {
   margin: 0;
 }
 
+.title {
+  font-family: 'Space Mono', monospace;
+}
+
 .bgimg {
   position: relative;
-  opacity: 0.95;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,52 +34,83 @@ hr {
     .wrapper {
       width: 80%;
       margin: 60px auto 0;
-      border-top: 6px solid #fff;
-      border-right: 6px solid #fff;
+      border-top: 6px solid #fdd835;
+      border-right: 6px solid #fdd835;
       position: relative;
       color: #fff;
-      h1 {
+      .border {
+        background-color: #111;
+        color: #fff;
+        padding: 0 18px;
+        font-size: 1.88em;
+        line-height: 40px;
         margin: 0;
+        float: right;
+        border-top: 6px solid #fdd835;
+        position: relative;
+        right: -6px;
       }
       h2 {
-        font-size: 2.2em;
+        font-size: 2.3em;
         margin: 0;
         padding: 40px 20px;
         text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
       }
     }
 
-    .border {
-      // position: absolute;
-      float: right;
-      position: relative;
-      border-top: 6px solid #fff;
-      right: -6px;
-    }
     #counter {
-      color: #fff;
-      font-family: "Roboto", sans-serif;
-      font-size: 4em;
+      color: #fdd835;
+      font-family: 'Space Mono', monospace;
+      font-size: 3em;
       text-align: center;
       position: absolute;
       bottom: 0;
       left: 50%;
-      transform: translate(-50%, 200%);
+      opacity: 0;
+      transform: translate(-50%, -200%);
       text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
     }
   }
   &-2 {
     background-image: url("../images/Laberinto.jpg");
     min-height: 90%;
-    .caption span {
-      // background-color:transparent !important;
-      font-size:25px !important;
-      color: #f7f7f7 !important;
+    opacity: .2;
+    .border {
+      background-color: #111;
+      color: #fff;
+      padding: 0 18px;
+      font-size: 1.88em;
+      letter-spacing: 4px;
+      line-height: 62px;
     }
   }
   &-3 {
     background-image: url("../images/Foto Quotes.jpg");
-    min-height: 700px;
+    min-height: 100vh;
+    opacity: 1;
+    blockquote {
+      color: #fff;
+      font-size: 1.5em;
+      margin: 40px 15px;
+      border-left: 5px solid #fff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+      padding: 20px 15px 20px 40px;
+      width: 30%;
+      line-height: 40px;
+      font-family: 'Glegoo', serif;
+      display: inline-block;
+      text-align: left;
+      &.two {
+        position: relative;
+        top: 230px;
+      }
+    }
+    .caption {
+      color: #000;
+    }
+    .caption {
+      padding: 0 5%;
+    }
   }
   &-4 {
     background-image: url("../images/1a.png");
@@ -88,22 +125,12 @@ hr {
     width: 100%;
     text-align: center;
     color: #000;
-    h1, span.border {
-      background-color: #111;
-      color: #fff;
-      padding: 0 18px;
-      font-size: 25px;
-      letter-spacing: 5px;
-      line-height: 62px;
-    }
   }
 }
 
 h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
+  font-family: 'Space Mono', monospace;
+  color: #fdd835;
 }
 
 h4 {
@@ -119,14 +146,18 @@ h4 {
     background-color:#000;
     text-align:center;
     padding:50px 80px;
-    text-align: justify;
+    h3 {
+      text-align: left;
+    }
   }
   &-text {
-
+    text-align: justify;
   }
   &-card {
+    display: inline-block;
     position: relative;
-    margin: 15px 10px;
+    padding: 30px;
+    text-align: center;
     &:hover {
       img {
         opacity: .3;
@@ -139,9 +170,10 @@ h4 {
       }
     }
     img {
+      max-width: 450px;
       width: 100%;
-      height: 250px;
       transition: .8s;
+      border: 3px solid #fff;
     }
     p {
       transition: .7s;
@@ -163,27 +195,46 @@ h4 {
   position: relative;
   color:#ddd;
   text-align:center;
-  padding:50px 80px;
+  padding:50px 80px 100px;
   text-align: justify;
   img {
-    width: 100%;
+    // width: 100%;
+    max-height: 330px;
+    position: absolute;
   }
   
+}
+
+.relative {
+  position: relative;
 }
 
 .software {
   color:#ddd;
   background-color:#000;
-  text-align:center;
   padding:50px 80px;
   text-align-last: left;
   ul li p {
     margin: 0;
     padding: 15px 26px;
+    text-align: left;
+  }
+  .collapsible-header {
+    background-color: #000;
+    border-bottom: 1px solid #fdd835;
+  }
+  .collapsible-body {
+    border-bottom: 1px solid #fdd835;
+    ul li {
+      list-style-type: initial;
+    }
   }
 }
 
 .footer {
+  button {
+    background-color: #fdd835;
+  }
   /* label color */
   .input-field {
     color: #fdd835;

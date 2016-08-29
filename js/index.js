@@ -14,7 +14,8 @@ $(document).ready(function(){
   });
   
   var optionsScroll = [
-    { selector: '#counter',
+    { 
+      selector: '#counter',
       offset: 50, 
       callback: function(el) {
         // debugger
@@ -26,17 +27,58 @@ $(document).ready(function(){
       offset: 90,
       callback: function(el) {
         // debugger
-        $(el).css( "transform", "translate(-50%, -110%)");
+        $(el).css( "opacity", "1");
+        $(el).fadeIn("slow")
         demo.start();
       }
     },
     {
-      selector: '#image-test',
-      offset: 500, 
-      callback: function(el) { 
-        Materialize.fadeInImage($(el));
+      selector: '.bgimg-2',
+      offset: 150, 
+      callback: function(el) {
+        // debugger
+        $(el).css( "opacity", ".4");
+        // Materialize.fadeInImage($(el));
       }
-    } 
+    },
+    {
+      selector: '.bgimg-2',
+      offset: 300,
+      callback: function(el) {
+        // debugger
+        $(el).css( "opacity", ".6");
+        // Materialize.fadeInImage($(el));
+      }
+    },
+    {
+      selector: '.bgimg-2',
+      offset: 450, 
+      callback: function(el) {
+        // debugger
+        $(el).css( "opacity", ".8");
+        // Materialize.fadeInImage($(el));
+      }
+    },
+    {
+      selector: '.bgimg-2',
+      offset: 600, 
+      callback: function(el) {
+        // debugger
+        $(el).css( "opacity", "1");
+        // Materialize.fadeInImage($(el));
+      }
+    },
+    {
+      selector: '.independence img',
+      offset: 60, 
+      callback: function(el) {
+        // debugger
+        $(el).addClass('animated bounceInRight');
+        $('html').css("width", "100%")
+        // Materialize.fadeInImage($(el));
+      }
+    }
+
   ];
   Materialize.scrollFire(optionsScroll);
 
