@@ -4,10 +4,10 @@ $(document).ready(function(){
     useGrouping : true, 
     separator : ',', 
     decimal : '.', 
-    prefix : '', 
-    suffix : ''
+    prefix : '$ ', 
+    suffix : ' USD'
   };
-  var demo = new CountUp("counter", 1000000, 42450000, 0, 2.5, options);
+  var demo = new CountUp("counter", 1000000, 42450000, 0, 1.5, options);
 
   $('.collapsible').collapsible({
     accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
@@ -23,9 +23,10 @@ $(document).ready(function(){
     },
     {
       selector: '#counter',
-      offset: 220,
+      offset: 90,
       callback: function(el) {
         // debugger
+        $(el).css( "transform", "translate(-50%, -110%)");
         demo.start();
       }
     },
