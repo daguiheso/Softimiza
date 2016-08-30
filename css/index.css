@@ -18,18 +18,20 @@ hr {
   background-repeat: no-repeat;
   background-size: cover; }
   .bgimg header {
-    text-align: center; }
+    text-align: center;
+    background: rgba(20, 20, 20, 0.5);
+    border-bottom: 1px solid #fdd835; }
     .bgimg header img {
       padding: 10px;
       width: 250px; }
   .bgimg-1 {
-    background-image: url("../images/1a.png");
+    background-image: url("../images/Portada.png");
     min-height: 100%; }
     .bgimg-1 .wrapper {
       width: 80%;
       margin: 60px auto 0;
-      border-top: 6px solid #fdd835;
-      border-right: 6px solid #fdd835;
+      border-top: 4px solid #fdd835;
+      border-right: 4px solid #fdd835;
       position: relative;
       color: #fff; }
       .bgimg-1 .wrapper .border {
@@ -40,24 +42,24 @@ hr {
         line-height: 40px;
         margin: 0;
         float: right;
-        border-top: 6px solid #fdd835;
+        border-top: 4px solid #fdd835;
         position: relative;
-        right: -6px; }
+        right: -4px; }
       .bgimg-1 .wrapper h2 {
-        font-size: 2.3em;
+        font-size: 3.3em;
         margin: 0;
         padding: 40px 20px;
         text-shadow: 2px 2px 1px black; }
     .bgimg-1 #counter {
       color: #fdd835;
       font-family: 'Space Mono', monospace;
-      font-size: 3em;
+      font-size: 4em;
       text-align: center;
       position: absolute;
       bottom: 0;
       left: 50%;
       opacity: 0;
-      transform: translate(-50%, -200%);
+      transform: translate(-50%, -140%);
       text-shadow: 2px 2px 1px black; }
   .bgimg-2 {
     background-image: url("../images/Laberinto.jpg");
@@ -67,14 +69,15 @@ hr {
       background-color: #111;
       color: #fff;
       padding: 0 18px;
-      font-size: 1.88em;
+      font-size: 2em;
       letter-spacing: 4px;
       line-height: 62px; }
   .bgimg-3 {
-    background-image: url("../images/Foto Quotes.jpg");
-    min-height: 60vh;
-    opacity: 1; }
+    background-image: url("../images/quotes.jpeg");
+    min-height: 80vh;
+    opacity: .9; }
     .bgimg-3 blockquote {
+      background: rgba(0, 0, 0, 0.15);
       color: #fff;
       font-size: 1.5em;
       margin: 40px 15px;
@@ -125,17 +128,18 @@ h4 {
     .services .wrapper h3 {
       text-align: left; }
   .services-text {
-    text-align: justify; }
+    text-align: justify;
+    font-size: 1.25em; }
   .services-card {
     display: inline-block;
     position: relative;
-    padding: 30px;
+    padding: 8px;
     text-align: center; }
     .services-card:hover img {
       opacity: .3; }
     .services-card:hover p {
       display: block;
-      font-size: 1.5em;
+      font-size: 1.7em;
       transform: translate(-50%, -50%);
       opacity: 1; }
     .services-card img {
@@ -160,7 +164,8 @@ h4 {
   color: #ddd;
   text-align: center;
   padding: 50px 80px 100px;
-  text-align: justify; }
+  text-align: justify;
+  font-size: 1.25em; }
   .independence img {
     max-height: 330px;
     position: absolute; }
@@ -172,7 +177,8 @@ h4 {
   color: #ddd;
   background-color: #000;
   padding: 50px 80px;
-  text-align-last: left; }
+  text-align-last: left;
+  font-size: 1.25em; }
   .software ul li p {
     margin: 0;
     padding: 15px 26px;
@@ -182,8 +188,6 @@ h4 {
     border-bottom: 1px solid #fdd835; }
   .software .collapsible-body {
     border-bottom: 1px solid #fdd835; }
-    .software .collapsible-body ul li {
-      list-style-type: initial; }
 
 .footer {
   /* label color */ }
