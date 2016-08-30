@@ -86,7 +86,7 @@ hr {
   }
   &-3 {
     background-image: url("../images/Foto Quotes.jpg");
-    min-height: 100vh;
+    min-height: 60vh;
     opacity: 1;
     blockquote {
       color: #fff;
@@ -94,7 +94,7 @@ hr {
       margin: 40px 15px;
       border-left: 5px solid #fff;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
-      padding: 20px 15px 20px 40px;
+      padding: 0 15px 0 40px;
       width: 30%;
       line-height: 40px;
       font-family: 'Glegoo', serif;
@@ -170,10 +170,9 @@ h4 {
       }
     }
     img {
-      max-width: 450px;
+      max-width: 360px;
       width: 100%;
       transition: .8s;
-      border: 3px solid #fff;
     }
     p {
       transition: .7s;
@@ -233,27 +232,44 @@ h4 {
 
 .footer {
   button {
+    margin-top: 20px;
     background-color: #fdd835;
+    &:hover {
+      background-color: #fbcd01;
+    }
+  }
+  .info {
+    color: #fff;
+    padding-top: 70px;
   }
   /* label color */
   .input-field {
     color: #fdd835;
-  }
-  .input-field label {
-    color: #fff;
-  }
-  // /* label focus color */
-  // .input-field input[type=text]:focus + label {
-  //   color: #fdd835;
-  // }
-  /* icon prefix focus color */
-   .input-field .prefix.active {
-     color: #fff;
-   }
-
-  /* label underline focus color */
-  .input-field input {
-    border-bottom: 1px solid #fdd835;
-    box-shadow: 0 1px 0 0 #fdd835;
+    label {
+      color: #fff;
+    }
+    /* label focus color */
+    input[type=text]:focus + label,
+    input[type=tel]:focus + label,
+    input[type=email]:focus + label {
+      color: #fdd835;
+    }
+    /* label underline focus color */
+    input[type=text]:focus,
+    input[type=tel]:focus,
+    input[type=email]:focus {
+      border-bottom: 1px solid #fff;
+      box-shadow: 0 1px 0 0 #fff;
+      color: #fff;
+    }
+    /* icon prefix focus color */
+    .prefix.active {
+      color: #fff;
+    }
+    /* label underline focus color */
+    input {
+      border-bottom: 1px solid #fdd835;
+      box-shadow: 0 1px 0 0 #fdd835;
+    }
   }
 }

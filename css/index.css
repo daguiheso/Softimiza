@@ -72,7 +72,7 @@ hr {
       line-height: 62px; }
   .bgimg-3 {
     background-image: url("../images/Foto Quotes.jpg");
-    min-height: 100vh;
+    min-height: 60vh;
     opacity: 1; }
     .bgimg-3 blockquote {
       color: #fff;
@@ -80,7 +80,7 @@ hr {
       margin: 40px 15px;
       border-left: 5px solid #fff;
       text-shadow: 1px 1px 1px black;
-      padding: 20px 15px 20px 40px;
+      padding: 0 15px 0 40px;
       width: 30%;
       line-height: 40px;
       font-family: 'Glegoo', serif;
@@ -139,10 +139,9 @@ h4 {
       transform: translate(-50%, -50%);
       opacity: 1; }
     .services-card img {
-      max-width: 450px;
+      max-width: 360px;
       width: 100%;
-      transition: .8s;
-      border: 3px solid #fff; }
+      transition: .8s; }
     .services-card p {
       transition: .7s;
       opacity: 0;
@@ -187,17 +186,35 @@ h4 {
       list-style-type: initial; }
 
 .footer {
-  /* label color */
-  /* icon prefix focus color */
-  /* label underline focus color */ }
+  /* label color */ }
   .footer button {
+    margin-top: 20px;
     background-color: #fdd835; }
+    .footer button:hover {
+      background-color: #fbcd01; }
+  .footer .info {
+    color: #fff;
+    padding-top: 70px; }
   .footer .input-field {
-    color: #fdd835; }
-  .footer .input-field label {
-    color: #fff; }
-  .footer .input-field .prefix.active {
-    color: #fff; }
-  .footer .input-field input {
-    border-bottom: 1px solid #fdd835;
-    box-shadow: 0 1px 0 0 #fdd835; }
+    color: #fdd835;
+    /* label focus color */
+    /* label underline focus color */
+    /* icon prefix focus color */
+    /* label underline focus color */ }
+    .footer .input-field label {
+      color: #fff; }
+    .footer .input-field input[type=text]:focus + label,
+    .footer .input-field input[type=tel]:focus + label,
+    .footer .input-field input[type=email]:focus + label {
+      color: #fdd835; }
+    .footer .input-field input[type=text]:focus,
+    .footer .input-field input[type=tel]:focus,
+    .footer .input-field input[type=email]:focus {
+      border-bottom: 1px solid #fff;
+      box-shadow: 0 1px 0 0 #fff;
+      color: #fff; }
+    .footer .input-field .prefix.active {
+      color: #fff; }
+    .footer .input-field input {
+      border-bottom: 1px solid #fdd835;
+      box-shadow: 0 1px 0 0 #fdd835; }
