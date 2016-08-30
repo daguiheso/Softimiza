@@ -128,7 +128,7 @@ h4 {
     .services .wrapper h3 {
       text-align: left; }
   .services-text {
-    text-align: justify;
+    text-align: initial;
     font-size: 1.25em; }
   .services-card {
     display: inline-block;
@@ -163,11 +163,11 @@ h4 {
   position: relative;
   color: #ddd;
   text-align: center;
-  padding: 50px 80px 100px;
-  text-align: justify;
+  padding: 50px 80px 150px;
+  text-align: initial;
   font-size: 1.25em; }
   .independence img {
-    max-height: 330px;
+    max-height: 320px;
     position: absolute; }
 
 .relative {
@@ -222,3 +222,38 @@ h4 {
     .footer .input-field input {
       border-bottom: 1px solid #fdd835;
       box-shadow: 0 1px 0 0 #fdd835; }
+
+@media screen and (max-width: 1312px) {
+  .services-card img {
+    max-width: 270px; } }
+
+@media screen and (max-width: 1104px) {
+  .bgimg-3 blockquote {
+    width: auto; } }
+
+@media screen and (max-width: 1042px) {
+  .services .wrapper {
+    padding: 40px 20px; }
+  .services-card img {
+    max-width: 350px; }
+  .services-text {
+    text-align: initial; }
+  .independence {
+    height: 60vh;
+    padding: 50px 80px 50px; }
+    .independence img {
+      max-height: 280px; } }
+
+@media screen and (max-width: 992px) {
+  .independence {
+    height: 90vh; }
+    .independence img {
+      max-height: 300px; } }
+
+@media screen and (max-width: 768px) {
+  .bgimg-3 {
+    min-height: 100vh; } }
+
+@media screen and (max-width: 600px) {
+  html, body {
+    font-size: 14px; } }
