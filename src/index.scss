@@ -339,6 +339,23 @@ h4 {
   .bgimg-3 {
     min-height: 100vh;
   }
+  body, html {
+    font-size: 14px;
+  }
+  .bgimg {
+    &-1 {
+      .wrapper {
+        h2 {
+          font-size: 3em;
+        }
+      }
+      #counter {
+        font-size: 3.1em;
+        width: 100%;
+        transform: translate(-50%, -105%);
+      }
+    }
+  }
 }
 @media screen and (max-width: 600px) {
   html, body {

@@ -7,7 +7,7 @@ $(document).ready(function(){
     prefix : '$ ', 
     suffix : ' USD'
   };
-  var demo = new CountUp("counter", 1000000, 42450000, 0, 1.5, options);
+  var demo = new CountUp("counter", 1000000, 42450000, 0, 3.0, options);
 
   $('.collapsible').collapsible({
     accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
