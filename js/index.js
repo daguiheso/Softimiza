@@ -59,7 +59,7 @@ $(document).ready(function(){
       if (direction === 'down') {
         $(this.element).addClass('animated fadeOut');
         $(this.element).removeClass('fadeIn');
-        $(this.element).css('min-height', '50vh')
+        $(this.element).css('min-height', '60vh')
       }
       else {
         $(this.element).removeClass('fadeOut');
