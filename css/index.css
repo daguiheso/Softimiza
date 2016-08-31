@@ -3,7 +3,8 @@ body, html {
   height: 100%;
   margin: 0;
   color: #777;
-  font-size: 16px; }
+  font-size: 16px;
+  background: #000; }
 
 hr {
   margin: 0; }
@@ -12,6 +13,7 @@ hr {
   font-family: 'Space Mono', monospace; }
 
 .bgimg {
+  transition: 1s;
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -63,8 +65,7 @@ hr {
       text-shadow: 2px 2px 1px black; }
   .bgimg-2 {
     background-image: url("../images/Laberinto.jpg");
-    min-height: 100%;
-    opacity: .2; }
+    min-height: 100%; }
     .bgimg-2 .border {
       background-color: #111;
       color: #fff;
