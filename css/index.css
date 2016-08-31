@@ -29,7 +29,7 @@ hr {
     min-height: 100%; }
     .bgimg-1 .wrapper {
       width: 80%;
-      margin: 60px auto 0;
+      margin: -35px auto 0;
       border-top: 4px solid #fdd835;
       border-right: 4px solid #fdd835;
       position: relative;
@@ -63,7 +63,7 @@ hr {
       text-shadow: 2px 2px 1px black; }
   .bgimg-2 {
     background-image: url("../images/Laberinto.jpg");
-    min-height: 90%;
+    min-height: 100%;
     opacity: .2; }
     .bgimg-2 .border {
       background-color: #111;
@@ -183,6 +183,8 @@ h4 {
     margin: 0;
     padding: 15px 26px;
     text-align: left; }
+  .software p a {
+    font-size: .7em; }
   .software .collapsible-header {
     background-color: #000;
     border-bottom: 1px solid #fdd835; }
@@ -191,6 +193,8 @@ h4 {
 
 .footer {
   /* label color */ }
+  .footer .wrapper {
+    padding-top: 120px; }
   .footer button {
     margin-top: 20px;
     background-color: #fdd835; }
