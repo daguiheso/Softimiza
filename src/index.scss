@@ -285,9 +285,20 @@ h4 {
 }
 
 
+@media screen and (min-width: 1453px) {
+  .services-card img {
+    max-width: 370px;
+  }
+  .wrappercard {
+    padding: 0 10%;
+  }
+}
 @media screen and (max-width: 1312px) {
   .services-card img {
     max-width: 270px;
+  }
+  .wrappercard {
+    padding: 0;
   }
 }
 @media screen and (max-width: 1104px) {
