@@ -2,6 +2,8 @@ var gulp = require('gulp')
 var browserSync = require('browser-sync').create()
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 
 // Server dev
 gulp.task('serve', function () {
@@ -22,13 +24,23 @@ gulp.task('css', function () {
     .pipe(browserSync.stream()) // refrescar navegador
 })
 
-// Minify
+// Minify  CSS
 gulp.task('minify-css', function() {
   return gulp.src('css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('css'));
 });
 
+// Minify JS
+gulp.task('minify-js', function (cb) {
+  pump([
+        gulp.src('js/*.js'),
+        uglify(),
+        gulp.dest('js')
+    ],
+    cb
+  );
+});
 
 // Watch changes
 gulp.task('watch', function() {
