@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Softimiza</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
@@ -16,13 +17,19 @@
       <img src="./images/Logo.png" alt="SOFTIMIZA">
       <!-- <hr> -->
     </header>
-    <div class="caption">
+    <div class="caption caption1">
       <div class="wrapper">
-        <h2>Somos una compañía de consultoría en Software Asset Management (SAM) y Software License Optimization (SLO) especializada en generar ahorros en la adquisición y utilización de Activos Informáticos para nuestros clientes.</h2>
+        <h2>Somos una compañía de consultoría en <span>Software Asset Management (SAM)</span> y <span>Software License Optimization (SLO)</span> especializada en generar ahorros en la adquisición y utilización de Activos Informáticos para nuestros clientes.</h2>
         <h1 class="border title">SOFTIMIZA</h1>
       </div>
     </div>
-    <h2 id="counter"></h2>
+    <div class="num">
+      <div class="usd">USD</div>
+      <div class="peso">$</div>
+      <div id="counter"></div>
+      <div class="text">Le hemos <br> ahorrado a <br> nuestros <br> clientes</div>
+      <div class="millions">Millones</div>
+    </div>
   </div>
 
   <div id="Laberinto" class="bgimg bgimg-2">
@@ -69,7 +76,7 @@
       <br>
     </div>
   </div>
-	<hr>
+	<!-- <hr> -->
 
   <div id="Independencia" class="independence">
     <div class="row">
@@ -80,18 +87,18 @@
 	      <p>Cuando usted gana, nosotros ganamos</p>
       </div>
       <div class="col m12 l5 offset-l1">
-    		<img src="./images/camiseta.jpg" alt="camiseta">
+    		<img src="./images/camiseta.jpeg" alt="camiseta">
     	</div>
     </div>
   </div>
 
 
   <div class="bgimg bgimg-3">
-    <div class="caption">
-      <blockquote>“El apoyo de Softimiza ha sido fundamental en la estrategia de licenciamiento de nuestra compañía, lo que se ha traducido en un uso más asertivo del licenciamiento y un menor TCO del software que utilizamos”</blockquote>
-      <blockquote>“Gracias a Softimiza diminuimos el TCO de 3 años de nuestras soluciones de Bases de Datos en 90%”</blockquote>
-      <blockquote>“El acompañamiento de Softimiza fue vital para que los resultados de la auditoría de licenciamiento se ajustara a los acuerdos contractuales adquiridos y no a las necesidades de venta del fabricante”</blockquote>
-    </div>
+    <!-- <div class="caption captionp"> -->
+      <blockquote id="quote1">“El apoyo de Softimiza ha sido fundamental en la estrategia de licenciamiento de nuestra compañía, lo que se ha traducido en un uso más asertivo del licenciamiento y un menor TCO del software que utilizamos”</blockquote>
+      <blockquote id="quote2">“Gracias a Softimiza diminuimos el TCO de 3 años de nuestras soluciones de Bases de Datos en 90%”</blockquote>
+      <blockquote id="quote3">“El acompañamiento de Softimiza fue vital para que los resultados de la auditoría de licenciamiento se ajustara a los acuerdos contractuales adquiridos y no a las necesidades de venta del fabricante”</blockquote>
+    <!-- </div> -->
   </div>
 
   <div id="Software" class="software">
@@ -106,6 +113,7 @@
 	      <p>Los beneficios de implementar una práctica de Software Asset Management en una organización pueden dividirse en 3 categorías: </p>
 	      <ul class="collapsible popout" data-collapsible="accordion">
 	        <li>
+            <i class="material-icons">play_arrow</i>
 	          <div class="collapsible-header"><i class="material-icons">call_received</i>Reducción de Riesgos</div>
 	          <div class="collapsible-body">
 		          <ul>
@@ -125,6 +133,7 @@
 	          </div>
 	        </li>
 	        <li>
+            <i class="material-icons">play_arrow</i>
 	          <div class="collapsible-header"><i class="material-icons">trending_up</i>Optimización de Inversiones</div>
 	          <div class="collapsible-body">
 		          <ul>
@@ -144,6 +153,7 @@
 	          </div>
 	        </li>
 	        <li>
+            <i class="material-icons">play_arrow</i>
 	          <div class="collapsible-header"><i class="material-icons">settings_input_component</i>Aumento de la Eficiencia Operacional</div>
 	          <div class="collapsible-body">
 		          <ul>
@@ -171,7 +181,7 @@
 
   <div class="bgimg bgimg-4 footer">
   	<div class="row wrapper">
-	    <form class="col m4 offset-m2">
+	    <form class="col s12 m4 offset-m2">
 	      <div class="row">
 	        <div class="input-field">
 	          <i class="material-icons prefix">account_circle</i>
@@ -195,11 +205,22 @@
           </div>
 	      </div>
 	    </form>
-	    <div class="col m4 center-align">
+	    <div class="col s12 m4 center-align">
         <div class="info">
   	      <img src="./images/Logoblack.png" alt="SOFTIMIZA">
-  	      <p><strong>Correo: </strong> Info@Softimiza.Co</p>
-  	      <p><strong>Celular: </strong> +57 (318) 226 8907</p>
+          <div>
+    	      <a href="mailto:info@Softimiza.co">
+              <strong>Correo: </strong>
+              <span>Info@Softimiza.Co</span>
+            </a>
+          </div>
+          <br>
+          <div>
+            <a href="tel:+573182268907">
+              <strong>Celular: </strong>
+              <span>+57 (318) 226 8907</span>
+            </a>
+          </div>
         </div>
 	    </div>
 	  </div>

@@ -1,29 +1,22 @@
 $(document).ready(function(){
+  // Counter
   var options = {
     useEasing : true, 
     useGrouping : true, 
     separator : ',', 
     decimal : '.', 
-    prefix : '$ ', 
-    suffix : ' USD'
+    prefix : '', 
+    suffix : '' 
   };
-  var demo = new CountUp("counter", 1000000, 42450000, 0, 3.0, options);
+  var demo = new CountUp("counter", 0, 42.5, 1, 5.5, options);
 
+  // Acordions
   $('.collapsible').collapsible({
     accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
   });
   
+  // Scroll fire
   var optionsScroll = [
-    {
-      selector: '#counter',
-      offset: 90,
-      callback: function(el) {
-        // debugger
-        $(el).css( "opacity", "1");
-        $(el).fadeIn("slow")
-        demo.start();
-      }
-    },
     {
       selector: '.independence img',
       offset: 60, 
@@ -38,6 +31,17 @@ $(document).ready(function(){
   ];
   Materialize.scrollFire(optionsScroll);
 
+  // Waypoints
+  $('.bgimg-1')
+    .waypoint(function(direction) {
+        $('.num').addClass('animated fadeIn');
+        $('.bgimg-1 .caption.caption1').css( "transform", "translate(-50%, -50");
+        $('.bgimg-1 .caption.caption1').css( "-webkit-transform", "translate(-50%, -50%)");
+        demo.start();
+    }, {
+      offset: '-10%'
+    })
+
   $('.bgimg-2')
     .waypoint(function(direction) {
       if (direction === 'down') {
@@ -48,7 +52,7 @@ $(document).ready(function(){
       else {
         $(this.element).removeClass('fadeOut');
         $(this.element).addClass('fadeIn');
-        $(this.element).css('min-height', '100%')
+        $(this.element).css('min-height', '80%')
       }
     }, {
       offset: -250
@@ -68,6 +72,48 @@ $(document).ready(function(){
       }
     }, {
       offset: '10px'
+    })
+
+  $('.bgimg-3')
+    .waypoint(function(direction) {
+      if (direction === 'down') {
+        $('#quote1').addClass('animated fadeIn');
+        $('#quote1').removeClass('fadeOut');
+      }
+      else {
+        $('#quote1').addClass('animated fadeOut');
+        $('#quote1').removeClass('fadeIn');
+      }
+    }, {
+      offset: '80%'
+    })
+
+  $('.bgimg-3')
+    .waypoint(function(direction) {
+      if (direction === 'down') {
+        $('#quote2').addClass('animated fadeIn');
+        $('#quote2').removeClass('fadeOut');
+      }
+      else {
+        $('#quote2').addClass('fadeOut');
+        $('#quote2').removeClass('fadeIn');
+      }
+    }, {
+      offset: '60%'
+    })
+
+  $('.bgimg-3')
+    .waypoint(function(direction) {
+      if (direction === 'down') {
+        $('#quote3').addClass('animated fadeIn');
+        $('#quote3').removeClass('fadeOut');
+      }
+      else {
+        $('#quote3').addClass('fadeOut');
+        $('#quote3').removeClass('fadeIn');
+      }
+    }, {
+      offset: '40%'
     })
 
 });

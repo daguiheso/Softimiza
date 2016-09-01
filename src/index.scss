@@ -1,11 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Glegoo);
 
+$yellow: #fdd835;
+$blue-light: #19b7dc;
+$white: #ffffff;
+$black: #000000;
+
 body, html {
   height: 100%;
   margin: 0;
   color: #777;
   font-size: 16px;
-  background: #000;
+  background: $black;
 }
 hr {
   margin: 0;
@@ -25,10 +30,10 @@ hr {
   header {
     text-align: center;
     background: rgba(20, 20, 20, 0.5);
-    border-bottom: 1px solid #fdd835;
+    border-bottom: 1px solid $blue-light;
     img {
-      padding: 10px;
-      width: 250px;
+      padding: 6px 0 0;
+      width: 290px;
     }
   }
   &-1 {
@@ -37,49 +42,86 @@ hr {
     .wrapper {
       width: 80%;
       margin: -35px auto 0;
-      border-top: 4px solid #fdd835;
-      border-right: 4px solid #fdd835;
+      border-top: 4px solid $blue-light;
+      border-right: 4px solid $blue-light;
       position: relative;
-      color: #fff;
+      color: $white;
       .border {
         background-color: #111;
-        color: #fff;
+        color: $white;
         padding: 0 18px;
-        font-size: 1.88em;
+        font-size: 1.6em;
         line-height: 40px;
         margin: 0;
         float: right;
-        border-top: 4px solid #fdd835;
+        border-top: 4px solid $blue-light;
         position: relative;
         right: -4px;
       }
       h2 {
-        font-size: 3.3em;
+        font-size: 2.4em;
         margin: 0;
-        padding: 40px 20px;
+        padding: 55px 60px;
         text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
       }
+      span {
+        font-style: italic;
+      }
     }
-
-    #counter {
-      color: #fdd835;
-      font-family: 'Space Mono', monospace;
-      font-size: 4em;
-      text-align: center;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
+    .caption.caption1 {
+      transform: translate(-50%, -30%);
+      -webkit-transform: translate(-50%, -30%);
+      transition: .9s;
+    }
+    .num {
+      font-weight: bold;
       opacity: 0;
-      transform: translate(-50%, -140%);
+      position: absolute;
+      transform: translate(-50%, 0);
       text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
+      bottom: 9%;
+      left: 50%;
+      color: $blue-light;
+      width: 425px;
+      .usd {
+        font-size: 1.5em;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        top: 30px;
+      }
+      .peso {
+        font-size: 4.8em;
+        display: inline-block;
+      }
+      #counter {
+        display: inline-block;
+        color: $blue-light;
+        font-family: 'Space Mono', monospace;
+        font-size: 5.7em;
+        text-align: center;
+      }
+      .text {
+        display: inline-block;
+        line-height:17px;
+        font-size: 1.2em;
+        color: $white;
+      }
+      .millions {
+        position: absolute;
+        right: 105px;
+        bottom: 0px;
+        color: $white;
+        font-size: 1.2em;
+      }
     }
   }
   &-2 {
     background-image: url("../images/Laberinto.jpg");
     min-height: 100%;
     .border {
-      background-color: #111;
-      color: #fff;
+      background-color: rgba(#23abc7, .5);
+      color: $white;
       padding: 0 18px;
       font-size: 2em;
       letter-spacing: 4px;
@@ -90,13 +132,13 @@ hr {
     background-image: url("../images/quotes.jpeg");
     min-height: 80vh;
     opacity: .9;
+    text-align: center;
     blockquote {
-
-      background: rgba(#000, .15);
-      color: #fff;
-      font-size: 1.5em;
+      background: rgba($black, .15);
+      color: $white;
+      font-size: 1.2em;
       margin: 40px 15px;
-      border-left: 5px solid #fff;
+      border-left: 5px solid $white;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
       padding: 0 15px 0 40px;
       width: 30%;
@@ -104,13 +146,35 @@ hr {
       font-family: 'Glegoo', serif;
       display: inline-block;
       text-align: left;
+      opacity: 0;
       &.two {
         position: relative;
         top: 230px;
       }
     }
-    .caption {
-      color: #000;
+    #quote1 {
+      position: absolute;
+      top: 0%;
+      left: 0;
+    }
+    #quote2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #quote3 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .caption.captionp {
+      color: $black;
+      position: relative;
+      transform: none;
+      -webkit-transform: none;
+      left: 0;
+      top: 0;
     }
     .caption {
       padding: 0 5%;
@@ -128,18 +192,18 @@ hr {
     -webkit-transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
-    color: #000;
+    color: $black;
   }
 }
-
 h3 {
   font-family: 'Space Mono', monospace;
-  color: #fdd835;
+  color: $blue-light;
+  font-size: 2.50em;
 }
 
 h4 {
   font-family: 'Slabo 27px', serif;
-  color: #fff;
+  color: $white;
   font-size: 45px;
 }
 
@@ -147,7 +211,7 @@ h4 {
   position:relative;
   .wrapper {
     color:#ddd;
-    background-color:#000;
+    background-color:$black;
     text-align:center;
     padding:50px 80px;
     h3 {
@@ -156,7 +220,7 @@ h4 {
   }
   &-text {
     text-align: initial;
-    font-size: 1.25em;
+    font-size: 1.12em;
   }
   &-card {
     display: inline-block;
@@ -169,7 +233,7 @@ h4 {
       }
       p {
         display: block;
-        font-size: 1.7em;
+        font-size: 1.24em;
         transform: translate(-50%, -50%);
         opacity: 1;
       }
@@ -195,16 +259,16 @@ h4 {
 }
 
 .independence {
-  background-color: #000;
+  background-color: #20272d;
   position: relative;
   color:#ddd;
   text-align:center;
-  padding:50px 80px 150px;
+  padding:50px 80px 202px;
   text-align: initial;
-  font-size: 1.25em;
+  font-size: 1.12em;
   img {
-    // width: 100%;
-    max-height: 320px;
+    max-width: 350px;
+    width: 100%;
     position: absolute;
   }
   
@@ -216,10 +280,10 @@ h4 {
 
 .software {
   color:#ddd;
-  background-color:#000;
+  background-color:$black;
   padding:50px 80px;
   text-align-last: left;
-  font-size: 1.25em;
+  font-size: 1.12em;
   ul li p {
     margin: 0;
     padding: 15px 26px;
@@ -229,11 +293,19 @@ h4 {
     font-size: .7em;
   }
   .collapsible-header {
-    background-color: #000;
-    border-bottom: 1px solid #fdd835;
+    background-color: $black;
+    border-bottom: 1px solid $blue-light;
   }
   .collapsible-body {
-    border-bottom: 1px solid #fdd835;
+    border-bottom: 1px solid $blue-light;
+  }
+  ul li {
+    position: relative;
+  }
+  ul li > i {
+    position: absolute;
+    right: 15px;
+    top: 12px;
   }
 }
 
@@ -243,43 +315,47 @@ h4 {
   }
   button {
     margin-top: 20px;
-    background-color: #fdd835;
+    background-color: $blue-light;
     &:hover {
       background-color: #fbcd01;
     }
   }
+  a {
+    color: $white;
+    padding: 10px;
+  }
   .info {
-    color: #fff;
+    color: $white;
     padding-top: 70px;
   }
   /* label color */
   .input-field {
-    color: #fdd835;
+    color: $blue-light;
     label {
-      color: #fff;
+      color: $white;
     }
     /* label focus color */
     input[type=text]:focus + label,
     input[type=tel]:focus + label,
     input[type=email]:focus + label {
-      color: #fdd835;
+      color: $blue-light;
     }
     /* label underline focus color */
     input[type=text]:focus,
     input[type=tel]:focus,
     input[type=email]:focus {
-      border-bottom: 1px solid #fff;
-      box-shadow: 0 1px 0 0 #fff;
-      color: #fff;
+      border-bottom: 1px solid $white;
+      box-shadow: 0 1px 0 0 $white;
+      color: $white;
     }
     /* icon prefix focus color */
     .prefix.active {
-      color: #fff;
+      color: $white;
     }
     /* label underline focus color */
     input {
-      border-bottom: 1px solid #fdd835;
-      box-shadow: 0 1px 0 0 #fdd835;
+      border-bottom: 1px solid $blue-light;
+      box-shadow: 0 1px 0 0 $blue-light;
     }
   }
 }
@@ -293,6 +369,13 @@ h4 {
     padding: 0 10%;
   }
 }
+@media screen and (max-width: 1366px) {
+  .bgimg {
+    header {
+      border-bottom: none;
+    }
+  }
+}
 @media screen and (max-width: 1312px) {
   .services-card img {
     max-width: 270px;
@@ -303,7 +386,7 @@ h4 {
 }
 @media screen and (max-width: 1104px) {
   .bgimg-3 blockquote {
-    width: auto;
+    width: 80%;
   }
 }
 @media screen and (max-width: 1042px) {
@@ -320,20 +403,33 @@ h4 {
   }
 
   .independence {
-    height: 60vh;
-    padding: 50px 80px 50px;
-    img {
-      max-height: 280px;
-    }
+    height: 55vh;
+    padding: 50px 50px 0;
   } 
 }
 @media screen and (max-width: 992px) {
   .independence {
-    height: 90vh;
+    height: 75vh;
     img {
-      max-height: 300px;
+      max-width: 290px;
     }
   } 
+}
+@media screen and (max-width: 792px) {
+  .bgimg-3 {
+    blockquote {
+    font-size: 1.2em;
+    margin: 0px 15px;
+    line-height: 35px;
+   }
+   #quote1 {
+    margin-top: 30px;
+   }
+   #quote3 {
+    margin-bottom: 30px;
+   }
+  }
+
 }
 @media screen and (max-width: 768px) {
   .bgimg-3 {
@@ -342,23 +438,101 @@ h4 {
   body, html {
     font-size: 14px;
   }
-  .bgimg {
-    &-1 {
-      .wrapper {
-        h2 {
-          font-size: 3em;
-        }
-      }
-      #counter {
-        font-size: 3.1em;
-        width: 100%;
-        transform: translate(-50%, -105%);
-      }
+}
+@media screen and (max-width: 700px) {
+  .bgimg-1 .wrapper h2 {
+    font-size: 2em;
+    padding: 30px;
+  }
+  .num {
+    width: 314px !important;
+    .usd {
+      font-size: 1.1em !important;
+    }
+    .peso {
+      font-size: 3.5em !important;
+    }
+    #counter {
+      font-size: 4em !important;
+    }
+    .text {
+      font-size: 1em !important;
+      margin-left: 10px;
+    }
+    .millions {
+      font-size: 1em !important;
+      bottom: -7px !important;
     }
   }
 }
 @media screen and (max-width: 600px) {
   html, body {
     font-size: 14px;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  .bgimg header img {
+    width: 160px;
+  }
+  .independence {
+    height: auto !important;
+    padding: 15px !important;
+    img {
+      position: initial;
+    }
+  }
+  .software {
+    padding: 50px 20px;
+  }
+  .footer .wrapper {
+    padding: 60px 20px;
+    img {
+      width: 170px;
+    }
+  }
+}
+@media screen and (max-width: 446px) {
+  .bgimg-1 .wrapper h2 {
+    font-size: 1.28em;
+    padding: 19px;
+  }
+  .bgimg-1 .wrapper {
+    width: 92%;
+    .border {
+      font-size: 1em;
+      padding: 0 6px;
+    }
+  }
+  .bgimg-2 .border {
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
+  .num {
+    font-size: 11px;
+    bottom: 4% !important;
+    width: 230px !important;
+  }
+  .independence {
+    padding: 50px 15px 0;
+    img {
+      max-width: 270px;
+    }
+  }
+  .bgimg-3 {
+    blockquote {
+      width: 90%;
+      margin: 30px 0 !important;
+      position: initial !important;
+    }
+    #quote2 {
+      transform: none;
+    }
+  }
+}
+@media screen and (max-width: 341px) {
+  .independence {
+      height: 80vh;
   }
 }
