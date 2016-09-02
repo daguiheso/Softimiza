@@ -4,12 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Softimiza</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="./css/animate.css">
-  <link rel="stylesheet" href="./css/index.css">
+  <style>
+    body,html{height:100%;margin:0;color:#777;font-size:16px;background:#000}.title{font-family:'Space Mono',monospace}.bgimg{position:relative;background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover}.bgimg header{text-align:center;background:rgba(20,20,20,0.5);border-bottom:1px solid #19b7dc}.bgimg header img{padding:6px 0 0;width:290px}.bgimg-1{background-image:url(./images/Portada.png);min-height:100%}.bgimg-1 .wrapper{width:80%;margin:-35px auto 0;border-top:4px solid #19b7dc;border-right:4px solid #19b7dc;position:relative;color:#fff}.bgimg-1 .wrapper .border{background-color:#111;color:#fff;padding:0 18px;font-size:1.6em;line-height:40px;margin:0;float:right;border-top:4px solid #19b7dc;position:relative;right:-4px}.bgimg-1 .wrapper h2{font-size:2.4em;margin:0;padding:55px 60px;text-shadow:2px 2px 1px #000}.bgimg-1 .wrapper span{font-style:italic}.bgimg-1 .caption.caption1{transform:translate(-50%,-30%);-webkit-transform:translate(-50%,-30%)}.bgimg-1 .num{font-weight:700;opacity:0;position:absolute;transform:translate(-50%,0);text-shadow:2px 2px 1px #000;bottom:7%;left:50%;color:#19b7dc;width:428px}.bgimg-1 .num .usd{font-size:1.5em;display:inline-block;vertical-align:top;position:relative;top:30px}.bgimg-1 .num .peso{font-size:4.8em;display:inline-block}.bgimg-1 .num #counter{display:inline-block;color:#19b7dc;font-family:'Space Mono',monospace;font-size:5.7em;text-align:center}.bgimg-1 .num .text{display:inline-block;line-height:17px;font-size:1.2em;color:#fff}.bgimg-1 .num .millions{position:absolute;right:105px;bottom:0;color:#fff;font-size:1.2em}.bgimg .caption{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);width:100%;text-align:center;color:#000}.software ul li p{margin:0;padding:15px 26px;text-align:left}.software .collapsible-body{border-bottom:1px solid #19b7dc}.software ul li{position:relative}@media screen and (max-width: 1366px){.bgimg header{border-bottom:none}}@media screen and (max-width: 768px){body,html{font-size:14px}}@media screen and (max-width: 700px){.bgimg-1 .wrapper h2{font-size:2em;padding:30px}.num{width:314px!important}.num .usd{font-size:1.1em!important}.num .peso{font-size:3.5em!important}.num #counter{font-size:4em!important}.num .text{font-size:1em!important;margin-left:10px}.num .millions{font-size:1em!important;bottom:-7px!important}}@media screen and (max-width: 600px){html,body{font-size:14px}.bgimg header img{width:160px}}@media screen and (max-width: 446px){.bgimg-1 .wrapper h2{font-size:1.28em;padding:19px}.bgimg-1 .wrapper{width:92%}.bgimg-1 .wrapper .border{font-size:1em;padding:0 6px}.num{font-size:11px;bottom:4%!important;width:230px!important}}
+  </style>
 </head>
 <body>
   <div class="bgimg bgimg-1">
@@ -231,5 +228,21 @@
   <script src="./js/jquery.waypoints.js"></script>
 	<script src="./js/countUp.js"></script>
 	<script src="./js/index.js"></script>
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Space Mono', 'Glegoo', 'Material+Icons' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/animate.css">
 </body>
 </html> 
