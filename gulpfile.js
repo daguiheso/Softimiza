@@ -34,7 +34,7 @@ gulp.task('minify-css', function() {
 // Minify JS
 gulp.task('minify-js', function (cb) {
   pump([
-        gulp.src('js/*.js'),
+        gulp.src('./src/*.js'),
         uglify(),
         gulp.dest('js')
     ],
@@ -45,8 +45,8 @@ gulp.task('minify-js', function (cb) {
 // Watch changes
 gulp.task('watch', function() {
   gulp.watch('./src/*.scss', ['css'])
-  gulp.watch('./js/*.js').on('change', browserSync.reload)
+  gulp.watch('./src/*.js').on('change', browserSync.reload)
   gulp.watch('./*.html').on('change', browserSync.reload)  // ejecuta function cada vez que escuche cambios
 })
 
-gulp.task('default', ['watch', 'serve'])
+gulp.task('default', ['watch', 'serve', 'minify-css', 'minify-js'])

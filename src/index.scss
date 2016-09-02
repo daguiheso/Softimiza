@@ -294,10 +294,10 @@ h3 {
   ul li {
     position: relative;
   }
-  ul li > i {
+  ul li i.arrow {
     position: absolute;
-    right: 15px;
-    top: 12px;
+    right: -10px;
+    top: 0;
   }
 }
 
@@ -464,8 +464,11 @@ h3 {
   h3 {
     font-size: 2em;
   }
-  .bgimg header img {
-    width: 160px;
+  .bgimg {
+    background-size: contain;
+    header img {
+      width: 160px;
+    }
   }
   .bgimg-3 blockquote {
     opacity: 1;
