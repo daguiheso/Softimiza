@@ -425,10 +425,20 @@ h3 {
 }
 @media screen and (max-width: 768px) {
   .bgimg-3 {
+    background-image: url(../images/quotesm.jpg);
+  }
+  .bgimg-3 {
     min-height: 100vh;
   }
   body, html {
     font-size: 14px;
+  }
+  .bgimg-2 {
+    background-image: url(../images/Laberintom.jpg);
+    // min-height: 50vh;
+  }
+  .bgimg-4 {
+    background-image: url(../images/1am.png);
   }
 }
 @media screen and (max-width: 700px) {
