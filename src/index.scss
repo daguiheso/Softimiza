@@ -242,11 +242,12 @@ section {
     width: 100%;
     .imgLogo {
       display: inline-block;
-      position: static;
+      position: initial;
       transform: none;
       width: 100%;
       max-width: 250px;
-      min-width: auto;
+      min-width: initial;
+      min-height: initial;
     }
     button {
       margin-top: 20px;
