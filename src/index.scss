@@ -8,12 +8,11 @@ body, html {
   margin: 0;
   color: #777;
   font-size: 16px;
-  background: $black;
 }
 
 header {
+  background: $black;
   text-align: center;
-  background: rgba(20, 20, 20, 0.5);
   border-bottom: 1px solid $blue-light;
   img {
     padding: 6px 0 0;
