@@ -1,10 +1,13 @@
 $(document).ready(function(){
+  $('.parallax').parallax();
 
-  var consulta =  window.matchMedia('(max-width:500px)'); 
-  consulta.addListener(mediaQuery);
-  mediaQuery ();
+  // Acordions
+  $('.collapsible').collapsible({
+    accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+  });
 
-  // Counter
+
+
   var options = {
     useEasing : true, 
     useGrouping : true, 
@@ -15,123 +18,77 @@ $(document).ready(function(){
   };
   var demo = new CountUp("counter", 0, 42.5, 1, 5.5, options);
 
-  // Acordions
-  $('.collapsible').collapsible({
-    accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-  });
-  
-  // Scroll fire
-  var optionsScroll = [
-    {
-      selector: '.independence img',
-      offset: 60, 
-      callback: function(el) {
-        // debugger
-        $(el).addClass('animated bounceInRight');
-        $('html').css("width", "100%")
-        // Materialize.fadeInImage($(el));
-      }
-    }
-
-  ];
-  Materialize.scrollFire(optionsScroll);
-
-  
-    function mediaQuery () {
-      if (consulta.matches) {
-        console.log('se cumplio')
-        
-      }
-      else {
-        console.log('no se cumplio')
-        $('.bgimg-2')
-          .waypoint(function(direction) {
-            if (direction === 'down') {
-              $(this.element).addClass('animated fadeOut');
-              $(this.element).removeClass('fadeIn');
-              $(this.element).css('min-height', '60%')
-            }
-            else {
-              $(this.element).removeClass('fadeOut');
-              $(this.element).addClass('fadeIn');
-              $(this.element).css('min-height', '100%')
-            }
-          }, {
-            offset: -250
-          })
-
-        $('.bgimg-3')
-          .waypoint(function(direction) {
-            if (direction === 'down') {
-              $(this.element).addClass('animated fadeOut');
-              $(this.element).removeClass('fadeIn');
-              $(this.element).css('min-height', '60vh')
-            }
-            else {
-              $(this.element).removeClass('fadeOut');
-              $(this.element).addClass('fadeIn');
-              $(this.element).css('min-height', '80vh')
-            }
-          }, {
-            offset: '-20%'
-          })
-
-        $('.bgimg-3')
-          .waypoint(function(direction) {
-            if (direction === 'down') {
-              $('#quote1').addClass('animated fadeIn');
-              $('#quote1').removeClass('fadeOut');
-            }
-            else {
-              $('#quote1').addClass('animated fadeOut');
-              $('#quote1').removeClass('fadeIn');
-            }
-          }, {
-            offset: '80%'
-          })
-
-        $('.bgimg-3')
-          .waypoint(function(direction) {
-            if (direction === 'down') {
-              $('#quote2').addClass('animated fadeIn');
-              $('#quote2').removeClass('fadeOut');
-            }
-            else {
-              $('#quote2').addClass('fadeOut');
-              $('#quote2').removeClass('fadeIn');
-            }
-          }, {
-            offset: '60%'
-          })
-
-        $('.bgimg-3')
-          .waypoint(function(direction) {
-            if (direction === 'down') {
-              $('#quote3').addClass('animated fadeIn');
-              $('#quote3').removeClass('fadeOut');
-            }
-            else {
-              $('#quote3').addClass('fadeOut');
-              $('#quote3').removeClass('fadeIn');
-            }
-          }, {
-            offset: '40%'
-          })
-      }
-    }
-  
 
   // Waypoints
-  $('.bgimg-1')
+  $('.sectionOne')
     .waypoint(function(direction) {
+      // debugger
         $('.num').addClass('animated fadeIn');
-        $('.bgimg-1 .caption.caption1').css( "transform", "translate(-50%, -50");
-        $('.bgimg-1 .caption.caption1').css( "-webkit-transform", "translate(-50%, -50%)");
+        $('.sectionOne .wrapper').css( "transform", "translate(-50%, -65%");
+        $('.sectionOne .wrapper').css( "-webkit-transform", "translate(-50%, -75%)");
         demo.start();
     }, {
-      offset: '-10%'
+      offset: '5%'
     })
 
-  
+  $('#Servicios')
+    .waypoint(function(direction) {
+      if (direction === 'down') {
+        $('#Laberinto').addClass('animated fadeOut');
+        $('#Laberinto').removeClass('fadeIn');
+        // $(this.element).css('min-height', '60%')
+      }
+      else {
+        $('#Laberinto').removeClass('fadeOut');
+        $('#Laberinto').addClass('fadeIn');
+        // $('#Laberinto').css('min-height', '100%')
+      }
+    }, {
+      offset: '35%'
+    })
+
+  $('#Quotes')
+    .waypoint(function(direction) {
+      if (direction === 'down') {
+        $('#quote1').addClass('animated fadeIn');
+        $('#quote1').removeClass('fadeOut');
+      }
+      else {
+        $('#quote1').addClass('animated fadeOut');
+        $('#quote1').removeClass('fadeIn');
+      }
+    }, {
+      offset: '60%'
+    })
+
+  $('#Quotes')
+    .waypoint(function(direction) {
+      if (direction === 'down') {
+        $('#quote2').addClass('animated fadeIn');
+        $('#quote2').removeClass('fadeOut');
+      }
+      else {
+        $('#quote2').addClass('fadeOut');
+        $('#quote2').removeClass('fadeIn');
+      }
+    }, {
+      offset: '30%'
+    })
+
+  $('#Quotes')
+    .waypoint(function(direction) {
+      if (direction === 'down') {
+        $('#quote3').addClass('animated fadeIn');
+        $('#quote3').removeClass('fadeOut');
+      }
+      else {
+        $('#quote3').addClass('fadeOut');
+        $('#quote3').removeClass('fadeIn');
+      }
+    }, {
+      offset: '10%'
+    })
+
 
 });
+        
