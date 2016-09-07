@@ -16,7 +16,7 @@ header {
   border-bottom: 1px solid $blue-light;
   img {
     padding: 6px 0 0;
-    width: 290px;
+    width: 340px;
   }
 }
 
@@ -239,6 +239,7 @@ section {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    padding: 40px 0;
     .imgLogo {
       display: inline-block;
       position: initial;
@@ -358,7 +359,6 @@ h3 {
   header {
     img {
       padding: 2px 0 0;
-      width: 170px;
     }
   }
   section {
@@ -415,7 +415,6 @@ h3 {
 @media screen and (min-width: 372px) {
   .show-on-small-only {
     display: none !important;
-    // transform: translate3d(-49%,20%,0) !important;
   }
 }
 
