@@ -89,6 +89,21 @@ $(document).ready(function(){
       offset: '10%'
     })
 
+    // FORM POST
+
+  // var name = document.getElementById("icon_prefix").value;
+  // var contact = document.getElementById("icon_telephone").value;
+  // var email = document.getElementById("icon_email").value;
+
+  // var data = {
+  //   name: name,
+  //   telephone: telephone,
+  //   email: email
+  // }
+
+  $.post( "../form/proces.php", $( "#contacto" ).serialize(), json )
+    .done(function(res) {
+
+    })
 
 });
-        
