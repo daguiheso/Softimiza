@@ -101,9 +101,17 @@ $(document).ready(function(){
   //   email: email
   // }
 
-  $.post( "../form/proces.php", $( "#contacto" ).serialize(), json )
-    .done(function(res) {
+  $( "#contacto" ).submit(function( event ) {
+    event.preventDefault();
+    debugger
+    $.post( "/form/proces.php", $( "#contacto" ).serialize() , function( data ) {
+      alert( "Data Loaded: " + data.response );
+    }, 'json')
 
-    })
+  });
 
 });
+
+
+ 
+ //
